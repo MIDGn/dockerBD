@@ -1,1 +1,2 @@
-# dockerBD
+# Запуск
+``docker-compose up``
