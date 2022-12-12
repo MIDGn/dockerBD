@@ -8,7 +8,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient('mongo', 27017)
 database = client["test_database"]
 collection = database.collection
 
@@ -45,4 +45,4 @@ def hello():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=os.environ.get("FLASK_SERVER_PORT", 8080), debug=True)
+    app.run(host='0.0.0.0', port=8080)
